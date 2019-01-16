@@ -1,10 +1,15 @@
 class MainController < ApplicationController
-  def answers
-    if params[:number].to_i.even?
-      @result_string = "Even"
+
+  def number_checker
+    @number = params[:number] == params[:number].to_i.to_s ? params[:number] : nil
+
+    if @number.nil?
+      @even_check = nil
+    elsif @number.to_i.even?
+      @even_check = "Even"
     else
-      @result_string = "Odd"
+      @even_check = "Odd"
     end
 
-
+  end
 end

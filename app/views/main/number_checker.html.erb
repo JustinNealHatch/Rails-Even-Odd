@@ -1,0 +1,13 @@
+<h1 Number Checker </h1>
+
+  <p>
+    Your number  is <%= @number %> <%= @even_check %>
+    </p>
+<hr />
+
+
+<%= form_tag(number_checker_path) do %>
+  <label>Enter a number: </label>
+  <input name="number" placeholder="Put something here"/>
+  <input name="Submit", type="submit" />
+  <% end %>
